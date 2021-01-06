@@ -15,7 +15,10 @@ int main(int n) {
     
     for(int i = 3; i<=n; i++){
         isPrime = true;
-        for(int j = 0; j*j <= v.size(); j++){
+        for(int j = 0; j <= v.size(); j++){
+            if(v[j]*v[j]>i){
+                break;
+            }
             if(i%v[j]==0){
                 isPrime = false;
                 break;
